@@ -25,8 +25,8 @@ imageFilenames.forEach((filename, index) => {
   });
 
 const newImage = document.createElement('img');
-newImage.setAttribute('src','images/pic2.jpg','images/pic3.jpg','images/pic4.jpg','images/pic5.jpg',)
-newImage.setAttribute('alt', 'Swirling rocks', 'Colorful flowers', 'Egyptian art', 'Butterfly');
+newImage.setAttribute('src', 'images/pic1.jpg','images/pic2.jpg','images/pic3.jpg','images/pic4.jpg','images/pic5.jpg',)
+newImage.setAttribute('alt', 'Closeup of an eye', 'Swirling rocks', 'Colorful flowers', 'Egyptian art', 'Butterfly');
 thumbBar.appendChild(newImage);
 
 /* Wiring up the Darken/Lighten button */
