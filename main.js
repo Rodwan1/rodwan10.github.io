@@ -24,11 +24,17 @@ imageFilenames.forEach((filename, index) => {
     });
   });
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', 'images/pic1.jpg','images/pic2.jpg','images/pic3.jpg','images/pic4.jpg','images/pic5.jpg',)
-newImage.setAttribute('alt', 'Closeup of an eye', 'Swirling rocks', 'Colorful flowers', 'Egyptian art', 'Butterfly');
-thumbBar.appendChild(newImage);
+imageFilenames.forEach((filename, index) => {
+  const newImage = document.createElement('img');
+  newImage.setAttribute('src', `images/${filename}`);
+  newImage.setAttribute('alt', altTexts[index]);
+  thumbBar.appendChild(newImage);
 
+  newImage.addEventListener('click', () => {
+    displayedImage.setAttribute('src', newImage.getAttribute('src'));
+    displayedImage.setAttribute('alt', newImage.getAttribute('alt'));
+  });
+});
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener('click', () => {
     if (btn.getAttribute('class') === 'dark') {
